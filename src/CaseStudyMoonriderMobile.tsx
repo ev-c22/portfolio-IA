@@ -157,7 +157,7 @@ function CaseStudyMoonriderMobile() {
           <a className="rounded border border-[#e6e6e6] px-2 py-0.5" href="/#play">
             Play
           </a>
-          <a className="rounded border border-[#e6e6e6] px-2 py-0.5" href="/#about">
+          <a className="rounded border border-[#e6e6e6] px-2 py-0.5" href="/about">
             About
           </a>
           <a className="rounded border border-[#e6e6e6] px-2 py-0.5" href="#contact">

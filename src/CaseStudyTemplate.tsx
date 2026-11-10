@@ -95,7 +95,7 @@ export default function CaseStudyTemplate({ name }: { name: string }) {
             <a className={`${navLink} border-[#e6e6e6]`} href="/#play">
               Play
             </a>
-            <a className={`${navLink} border-[#e6e6e6]`} href="/#about">
+            <a className={`${navLink} border-[#e6e6e6]`} href="/about">
               About
             </a>
             <a className={`${navLink} border-[#e6e6e6]`} href="#contact">

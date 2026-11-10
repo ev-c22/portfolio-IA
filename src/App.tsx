@@ -199,7 +199,7 @@ export default function App() {
               Work
             </a>
             <a href="#play">Play</a>
-            <a href="#about">About</a>
+            <a href="/about">About</a>
             <a href="#contact">Contact</a>
           </nav>
           <p>Barcelona</p>
