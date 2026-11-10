@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Jaro&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@700&family=Jaro&display=swap");
 @import "tailwindcss";
 
 @font-face {
@@ -211,6 +211,23 @@ html {
 .project-image {
   position: absolute;
   max-width: none;
+  transition: transform 400ms ease;
+}
+
+.project-card:hover .project-image {
+  transform: scale(1.08);
+}
+
+/* The Figma Inter face only ships weight 400, so hover switches to Inter Bold. */
+.project-card:hover .project-label {
+  font-family: "Inter", "Inter:Regular", Arial, sans-serif;
+  font-weight: 700;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .project-image {
+    transition: none;
+  }
 }
 
 .project-image--contain {
