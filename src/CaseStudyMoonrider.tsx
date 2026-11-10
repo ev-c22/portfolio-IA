@@ -1,5 +1,9 @@
 import { useEffect } from "react";
 
+// Purple/grey gradient behind the hero, shared with the mobile version.
+export const heroBackground =
+  "url(\"data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1412 634' preserveAspectRatio='none'><g transform='matrix(-5.825 -23.85 66.808 -16.317 706.25 312)'><foreignObject x='-368.15' y='-368.15' width='736.3' height='736.3'><div xmlns='http://www.w3.org/1999/xhtml' style='background-image: conic-gradient(from 90deg, rgb(0, 0, 0) -50%, rgb(6, 6, 6) -46.845%, rgb(13, 13, 13) -43.69%, rgb(26, 26, 26) -37.38%, rgb(51, 51, 51) -24.76%, rgb(77, 77, 77) -12.139%, rgb(102, 102, 102) 0.48077%, rgb(105, 77, 126) 6.3702%, rgb(108, 51, 149) 12.26%, rgb(111, 26, 173) 18.149%, rgb(113, 13, 184) 21.094%, rgb(114, 0, 196) 24.038%, rgb(86, 0, 147) 30.529%, rgb(57, 0, 98) 37.019%, rgb(43, 0, 74) 40.264%, rgb(29, 0, 49) 43.51%, rgb(14, 0, 25) 46.755%, rgb(7, 0, 12) 48.377%, rgb(0, 0, 0) 50%, rgb(6, 6, 6) 53.155%, rgb(13, 13, 13) 56.31%, rgb(26, 26, 26) 62.62%, rgb(51, 51, 51) 75.24%, rgb(77, 77, 77) 87.861%, rgb(102, 102, 102) 100.48%); opacity:0.800000011920929; height: 100%; width: 100%;'></div></foreignObject></g></svg>\")";
+
 const assetPathPrefix = "/assets/moonrider";
 const imgGroup = `${assetPathPrefix}/cc2d9.svg`;
 const imgScreenRecording20230911At1316581 = `${assetPathPrefix}/12f74.png`;
@@ -179,8 +183,7 @@ export default function CaseStudyMoonrider() {
               className="relative h-[634px] w-full overflow-clip rounded-[4px]"
               data-node-id="1:221"
               style={{
-                backgroundImage:
-                  "url(\"data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1412 634' preserveAspectRatio='none'><g transform='matrix(-5.825 -23.85 66.808 -16.317 706.25 312)'><foreignObject x='-368.15' y='-368.15' width='736.3' height='736.3'><div xmlns='http://www.w3.org/1999/xhtml' style='background-image: conic-gradient(from 90deg, rgb(0, 0, 0) -50%, rgb(6, 6, 6) -46.845%, rgb(13, 13, 13) -43.69%, rgb(26, 26, 26) -37.38%, rgb(51, 51, 51) -24.76%, rgb(77, 77, 77) -12.139%, rgb(102, 102, 102) 0.48077%, rgb(105, 77, 126) 6.3702%, rgb(108, 51, 149) 12.26%, rgb(111, 26, 173) 18.149%, rgb(113, 13, 184) 21.094%, rgb(114, 0, 196) 24.038%, rgb(86, 0, 147) 30.529%, rgb(57, 0, 98) 37.019%, rgb(43, 0, 74) 40.264%, rgb(29, 0, 49) 43.51%, rgb(14, 0, 25) 46.755%, rgb(7, 0, 12) 48.377%, rgb(0, 0, 0) 50%, rgb(6, 6, 6) 53.155%, rgb(13, 13, 13) 56.31%, rgb(26, 26, 26) 62.62%, rgb(51, 51, 51) 75.24%, rgb(77, 77, 77) 87.861%, rgb(102, 102, 102) 100.48%); opacity:0.800000011920929; height: 100%; width: 100%;'></div></foreignObject></g></svg>\")",
+                backgroundImage: heroBackground,
               }}
               data-name="Container"
             >
