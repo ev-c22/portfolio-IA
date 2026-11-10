@@ -1,3 +1,5 @@
+import { useEffect } from "react";
+
 const assetPathPrefix = "/assets/moonrider";
 const imgGroup = `${assetPathPrefix}/cc2d9.svg`;
 const imgScreenRecording20230911At1316581 = `${assetPathPrefix}/12f74.png`;
@@ -67,6 +69,20 @@ function Awesome({ className }: { className?: string }) {
 
 // Case study page for Moonrider, exported from Figma Make.
 export default function CaseStudyMoonrider() {
+  // The design is a fixed 1440px layout: scale it down to fit narrower screens.
+  useEffect(() => {
+    const page = document.querySelector<HTMLElement>(".moonrider-page");
+    if (!page) return;
+    const fit = () => {
+      const scale = Math.min(1, document.documentElement.clientWidth / 1440);
+      page.style.width = scale < 1 ? "1440px" : "";
+      page.style.zoom = scale < 1 ? String(scale) : "";
+    };
+    fit();
+    window.addEventListener("resize", fit);
+    return () => window.removeEventListener("resize", fit);
+  }, []);
+
   return (
     <div
       id="top"

@@ -625,11 +625,3 @@ footer {
   outline: 3px solid #7200c4;
   outline-offset: 3px;
 }
-
-/* The page is a fixed 1440px layout: scale it down on smaller screens. */
-@media (max-width: 900px) {
-  .moonrider-page {
-    width: 1440px;
-    zoom: calc(100vw / 1440px);
-  }
-}
