@@ -1,0 +1,11 @@
+{
+  "title": "Eva Caldas Arquero — UX & Graphic Designer",
+  "description": "Portfolio de Eva Caldas Arquero, diseñadora UX y gráfica en Barcelona.",
+  "robots": {
+    "index": true
+  },
+  "accessibility": {
+    "addBypassLinks": false,
+    "ignoreReducedMotion": false
+  }
+}
