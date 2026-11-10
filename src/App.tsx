@@ -106,18 +106,22 @@ function ProjectRow({ project }: { project: Project }) {
   );
 }
 
+// The first 3 projects are case studies; the rest are other projects.
+const listGroups = [
+  { title: "Case studies", projects: projects.slice(0, 3) },
+  { title: "Other projects", projects: projects.slice(3) },
+];
+
 function ProjectList() {
   return (
     <div className="project-list">
-      <div className="project-list-header">
-        <p>Selected work</p>
-        <div>
-          <p>({String(projects.length).padStart(2, "0")})</p>
-          <p>To 2026</p>
+      {listGroups.map((group) => (
+        <div key={group.title}>
+          <p className="project-list-header">{group.title}</p>
+          {group.projects.map((project) => (
+            <ProjectRow key={project.name} project={project} />
+          ))}
         </div>
-      </div>
-      {projects.map((project) => (
-        <ProjectRow key={project.name} project={project} />
       ))}
     </div>
   );
