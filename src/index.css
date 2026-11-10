@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=Jaro&display=swap");
 @import "tailwindcss";
 
 @font-face {
@@ -71,8 +72,8 @@ html {
   height: 241px;
   overflow: hidden;
   padding: 3px 14px 0;
-  font-family: "Jaro:Regular", Impact, sans-serif;
-  font-size: clamp(90px, 20.7vw, 298px);
+  font-family: "Jaro", "Jaro:Regular", Impact, sans-serif;
+  font-size: var(--title-size, clamp(60px, 15vw, 298px));
   font-weight: 400;
   font-variation-settings: "opsz" 6;
   line-height: 238px;
@@ -354,7 +355,7 @@ footer {
     justify-content: center;
     height: clamp(124px, 25vw, 200px);
     padding-top: 0;
-    font-size: clamp(74px, 20.5vw, 180px);
+    font-size: var(--title-size, clamp(54px, 15vw, 180px));
     line-height: 0.8;
     letter-spacing: 4px;
   }
@@ -395,7 +396,7 @@ footer {
   .site-header h1 {
     height: clamp(92px, 28vw, 150px);
     padding-inline: 8px;
-    font-size: clamp(54px, 20vw, 104px);
+    font-size: var(--title-size, clamp(40px, 15vw, 104px));
     letter-spacing: 1px;
   }
 
