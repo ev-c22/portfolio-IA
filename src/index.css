@@ -326,24 +326,21 @@ html {
   line-height: 25px;
 }
 
-.project-list-header,
-.project-row {
-  display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 10px;
-}
-
 .project-list-header {
   padding: 12px 0;
   color: rgb(0 0 0 / 50%);
 }
 
-.project-list-header > div {
-  display: flex;
-  justify-content: space-between;
+/* Section headers after the first one ("Other projects") get breathing room. */
+.project-list > div + div .project-list-header {
+  margin-top: 48px;
+  border-top: 1px solid #e6e6e6;
 }
 
 .project-row {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 10px;
   padding: 12px 0;
   border-top: 1px solid #e6e6e6;
 }
