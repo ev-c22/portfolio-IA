@@ -319,20 +319,77 @@ html {
   opacity: 0.4;
 }
 
-.projects--list {
-  grid-template-columns: 1fr;
+/* List view: info on the left half, 4 square thumbnails on the right half,
+   aligned with the Grid / List switcher columns above. */
+.project-list {
+  font-size: 21px;
+  line-height: 25px;
 }
 
-.projects--list .project-card {
-  aspect-ratio: 4 / 1;
+.project-list-header,
+.project-row {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 10px;
 }
 
-.projects--list .project-image--pinpoint {
-  top: -117%;
+.project-list-header {
+  padding: 12px 0;
+  color: rgb(0 0 0 / 50%);
 }
 
-.projects--list .project-image--capoeira {
-  top: -140%;
+.project-list-header > div {
+  display: flex;
+  justify-content: space-between;
+}
+
+.project-row {
+  padding: 12px 0;
+  border-top: 1px solid #e6e6e6;
+}
+
+.project-row-info h3 {
+  font: inherit;
+  color: #121212;
+}
+
+.project-row-info p {
+  color: rgb(0 0 0 / 50%);
+}
+
+.project-row-media {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 6px;
+}
+
+.project-thumb {
+  overflow: hidden;
+  border-radius: 4px;
+  aspect-ratio: 1;
+  background: #e6e6e6;
+}
+
+.project-thumb img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 400ms ease;
+}
+
+.project-row:hover .project-thumb img {
+  transform: scale(1.08);
+}
+
+.project-row:hover .project-row-info h3 {
+  font-family: "Inter", "Inter:Regular", Arial, sans-serif;
+  font-weight: 700;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .project-thumb img {
+    transition: none;
+  }
 }
 
 footer {
@@ -475,8 +532,13 @@ footer {
     line-height: 28px;
   }
 
-  .projects--list .project-card {
-    aspect-ratio: 2 / 1;
+  .project-list {
+    font-size: 17px;
+    line-height: 22px;
+  }
+
+  .project-row {
+    grid-template-columns: 1fr;
   }
 
   footer {
