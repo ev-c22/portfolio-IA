@@ -27,6 +27,7 @@ const projects: Project[] = [
     image: "/assets/3515f.png",
     imageClass: "project-image--contain",
     background: "#d4ebe5",
+    href: "/school-jam",
   },
   {
     name: "La Plata",
@@ -34,6 +35,7 @@ const projects: Project[] = [
     image: "/assets/04ba0.png",
     imageClass: "project-image--cover",
     background: "#ffffff",
+    href: "/la-plata",
   },
   {
     name: "Pinpoint",
