@@ -77,6 +77,52 @@ function ProjectCard({ project }: { project: Project }) {
   );
 }
 
+// Each list row shows 4 thumbnails. Only the first uses the project's image for now;
+// the rest are grey placeholders to swap for real images later.
+const LIST_THUMBNAILS = 4;
+
+function ProjectRow({ project }: { project: Project }) {
+  return (
+    <article className="project-row">
+      <div className="project-row-info">
+        <h3>{project.name}</h3>
+        <p>{project.discipline}</p>
+      </div>
+      <div className="project-row-media">
+        {Array.from({ length: LIST_THUMBNAILS }, (_, index) => {
+          const image = index === 0 ? project.image : undefined;
+          return (
+            <div
+              className="project-thumb"
+              key={index}
+              style={image ? { backgroundColor: project.background } : undefined}
+            >
+              {image ? <img alt={`${project.name} project`} src={image} /> : null}
+            </div>
+          );
+        })}
+      </div>
+    </article>
+  );
+}
+
+function ProjectList() {
+  return (
+    <div className="project-list">
+      <div className="project-list-header">
+        <p>Selected work</p>
+        <div>
+          <p>({String(projects.length).padStart(2, "0")})</p>
+          <p>To 2026</p>
+        </div>
+      </div>
+      {projects.map((project) => (
+        <ProjectRow key={project.name} project={project} />
+      ))}
+    </div>
+  );
+}
+
 const TITLE_MAX_SIZE = 298;
 
 // Scales the header name so "EVA CALDAS" always fits the available width.
@@ -180,11 +226,15 @@ export default function App() {
             </button>
           </div>
 
-          <div className={`projects projects--${view}`}>
-            {projects.map((project) => (
-              <ProjectCard key={project.name} project={project} />
-            ))}
-          </div>
+          {view === "grid" ? (
+            <div className="projects projects--grid">
+              {projects.map((project) => (
+                <ProjectCard key={project.name} project={project} />
+              ))}
+            </div>
+          ) : (
+            <ProjectList />
+          )}
         </section>
         <span className="sr-only" id="play">
           Play
