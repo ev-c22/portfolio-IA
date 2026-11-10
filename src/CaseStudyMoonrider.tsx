@@ -1,4 +1,43 @@
-import { useEffect } from "react";
+import { useEffect, useRef } from "react";
+
+// App screen recordings (1280x720, phone centred on black), cropped to the phone.
+export const videoOnboarding = "/assets/moonrider/onboarding.mp4";
+export const videoAppNavigation = "/assets/moonrider/app-navigation.mp4";
+
+// Muted looping video that only plays while on screen, to save data.
+// With reduced motion it stays paused and shows controls instead.
+export function PhoneVideo({ src, label, className }: { src: string; label: string; className?: string }) {
+  const ref = useRef<HTMLVideoElement>(null);
+  const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+
+  useEffect(() => {
+    const video = ref.current;
+    if (!video || reduceMotion) return;
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) video.play().catch(() => {});
+        else video.pause();
+      },
+      { threshold: 0.25 },
+    );
+    observer.observe(video);
+    return () => observer.disconnect();
+  }, [reduceMotion]);
+
+  return (
+    <video
+      aria-label={label}
+      className={`bg-black object-cover ${className ?? ""}`}
+      controls={reduceMotion}
+      loop
+      muted
+      playsInline
+      preload="metadata"
+      ref={ref}
+      src={src}
+    />
+  );
+}
 
 // Purple/grey gradient behind the hero, shared with the mobile version.
 export const heroBackground =
@@ -661,7 +700,13 @@ export default function CaseStudyMoonrider() {
             className="h-[717px] relative rounded-[60px] shrink-0 w-[346px]"
             data-node-id="1:277"
             data-name="Screen Recording 2023-07-03 at 17.17.24"
-          />
+          >
+            <PhoneVideo
+              className="absolute inset-0 size-full rounded-[60px]"
+              label="Moonrider onboarding and sign-up flow"
+              src={videoOnboarding}
+            />
+          </div>
           <div
             className="h-[158px] opacity-80 relative shrink-0 w-[533px]"
             data-node-id="1:278"
@@ -844,7 +889,13 @@ export default function CaseStudyMoonrider() {
               className="col-1 h-[719px] ml-0 mt-0 relative rounded-[60px] row-1 w-[347px]"
               data-node-id="1:297"
               data-name="Screen Recording 2023-07-03 at 17.32.35"
-            />
+            >
+              <PhoneVideo
+                className="absolute inset-0 size-full rounded-[60px]"
+                label="Navigating the Moonrider app: favourites, plans and challenges"
+                src={videoAppNavigation}
+              />
+            </div>
           </div>
           <div
             className="content-stretch flex flex-col gap-[16px] items-start px-[16px] relative shrink-0 w-full"

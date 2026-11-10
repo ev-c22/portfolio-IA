@@ -1,5 +1,10 @@
 import { useEffect, useState, type ReactNode } from "react";
-import CaseStudyMoonrider, { heroBackground } from "./CaseStudyMoonrider";
+import CaseStudyMoonrider, {
+  PhoneVideo,
+  heroBackground,
+  videoAppNavigation,
+  videoOnboarding,
+} from "./CaseStudyMoonrider";
 
 // Mobile version of the Moonrider case study. Same content and images as the
 // desktop page (exported from Figma Make), laid out in a single readable column.
@@ -244,6 +249,11 @@ function CaseStudyMoonriderMobile() {
               There is a need to design and develop better apps and improve awareness and empathy towards wheelchair
               users.
             </p>
+            <PhoneVideo
+              className="mx-auto mt-4 aspect-[346/717] w-[72%] rounded-[44px]"
+              label="Moonrider onboarding and sign-up flow"
+              src={videoOnboarding}
+            />
           </div>
 
           <div className="relative h-[90px] overflow-hidden opacity-80" aria-hidden="true">
@@ -282,6 +292,11 @@ function CaseStudyMoonriderMobile() {
                 </div>
               ))}
             </ScrollStrip>
+            <PhoneVideo
+              className="mx-auto mt-4 aspect-[346/717] w-[72%] rounded-[44px]"
+              label="Navigating the Moonrider app: favourites, plans and challenges"
+              src={videoAppNavigation}
+            />
           </div>
 
           <div className="flex flex-col gap-4">
