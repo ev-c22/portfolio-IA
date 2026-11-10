@@ -138,7 +138,7 @@ const navLink = "rounded border px-2 py-0.5 md:px-[11px] md:py-1";
 
 export default function PlayPage() {
   return (
-    <div className="min-h-screen bg-[#aeaeae] font-['Inter:Regular'] text-[17px] leading-[1.45] text-black md:text-[24px] md:leading-[31px]">
+    <div className="min-h-screen bg-white font-['Inter:Regular'] text-[17px] leading-[1.45] text-black md:text-[24px] md:leading-[31px]">
       <div className="mx-auto max-w-[1440px]">
         <header className="flex flex-col gap-3 border-b border-[#e6e6e6] px-4 py-3 md:flex-row md:items-center md:justify-between md:px-[14px]">
           <a
