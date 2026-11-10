@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useRef, useState } from "react";
 
 type ViewMode = "grid" | "list";
 
@@ -77,13 +77,57 @@ function ProjectCard({ project }: { project: Project }) {
   );
 }
 
+const TITLE_MAX_SIZE = 298;
+
+// Scales the header name so "EVA CALDAS" always fits the available width.
+function FitTitle({ children }: { children: string }) {
+  const titleRef = useRef<HTMLHeadingElement>(null);
+  const textRef = useRef<HTMLSpanElement>(null);
+
+  useEffect(() => {
+    const title = titleRef.current;
+    const text = textRef.current;
+    if (!title || !text) return;
+
+    const fit = () => {
+      const styles = getComputedStyle(title);
+      const available =
+        title.clientWidth - parseFloat(styles.paddingLeft) - parseFloat(styles.paddingRight);
+      // Measure at a reference size, then scale so the full name fits.
+      title.style.setProperty("--title-size", "100px");
+      const measured = text.getBoundingClientRect().width;
+      if (!measured || available <= 0) return;
+      let size = Math.min(TITLE_MAX_SIZE, (100 * available) / measured);
+      title.style.setProperty("--title-size", `${size}px`);
+      // Second pass: letter-spacing is in px, so it does not scale with font-size.
+      const remeasured = text.getBoundingClientRect().width;
+      size = Math.min(TITLE_MAX_SIZE, (size * available) / remeasured);
+      title.style.setProperty("--title-size", `${Math.floor(size) - 1}px`);
+    };
+
+    fit();
+    document.fonts?.ready.then(fit);
+    const observer = new ResizeObserver(fit);
+    observer.observe(title);
+    return () => observer.disconnect();
+  }, []);
+
+  return (
+    <h1 ref={titleRef}>
+      <span ref={textRef} style={{ display: "inline-block" }}>
+        {children}
+      </span>
+    </h1>
+  );
+}
+
 export default function App() {
   const [view, setView] = useState<ViewMode>("grid");
 
   return (
     <div className="site-shell">
       <header className="site-header">
-        <h1>Eva&nbsp;&nbsp;Caldas</h1>
+        <FitTitle>{"Eva\u00a0\u00a0Caldas"}</FitTitle>
         <div className="nav-row">
           <nav aria-label="Primary navigation">
             <a aria-current="page" className="active" href="#work">
