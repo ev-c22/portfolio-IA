@@ -174,7 +174,7 @@ export default function CaseStudyMoonrider() {
                   <p className="leading-[32px]">Work</p>
                 </div>
               </a>
-              <a href="/#play"
+              <a href="/play"
                 className="border border-[#e6e6e6] border-solid content-stretch flex flex-col items-start px-[11px] py-[4px] relative rounded-[4px] shrink-0"
                 data-node-id="1:213"
                 data-name="Container"

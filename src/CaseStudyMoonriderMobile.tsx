@@ -154,7 +154,7 @@ function CaseStudyMoonriderMobile() {
           <a aria-current="page" className="rounded border border-[#121212] bg-[#121212] px-2 py-0.5 text-white" href="/">
             Work
           </a>
-          <a className="rounded border border-[#e6e6e6] px-2 py-0.5" href="/#play">
+          <a className="rounded border border-[#e6e6e6] px-2 py-0.5" href="/play">
             Play
           </a>
           <a className="rounded border border-[#e6e6e6] px-2 py-0.5" href="/about">

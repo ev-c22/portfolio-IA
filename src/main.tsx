@@ -4,12 +4,14 @@ import AboutPage from "./AboutPage";
 import App from "./App";
 import CaseStudyTemplate from "./CaseStudyTemplate";
 import { MoonriderPage } from "./CaseStudyMoonriderMobile";
+import PlayPage from "./PlayPage";
 import "./index.css";
 
 // Minimal routing: each case study has its own path, everything else is the home page.
 // vercel.json rewrites every path to index.html so these URLs load directly.
 const routes: Record<string, () => React.JSX.Element> = {
   "/about": () => <AboutPage />,
+  "/play": () => <PlayPage />,
   "/moonrider": () => <MoonriderPage />,
   // Placeholder pages until the real images and copy are ready.
   "/school-jam": () => <CaseStudyTemplate name="School Jam" />,

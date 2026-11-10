@@ -198,7 +198,7 @@ export default function App() {
             <a aria-current="page" className="active" href="#work">
               Work
             </a>
-            <a href="#play">Play</a>
+            <a href="/play">Play</a>
             <a href="/about">About</a>
             <a href="#contact">Contact</a>
           </nav>
@@ -262,9 +262,6 @@ export default function App() {
             <ProjectList />
           )}
         </section>
-        <span className="sr-only" id="play">
-          Play
-        </span>
       </main>
 
       <footer id="contact">

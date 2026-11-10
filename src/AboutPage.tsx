@@ -107,7 +107,7 @@ export default function AboutPage() {
             <a className={`${navLink} border-[#e6e6e6]`} href="/">
               Work
             </a>
-            <a className={`${navLink} border-[#e6e6e6]`} href="/#play">
+            <a className={`${navLink} border-[#e6e6e6]`} href="/play">
               Play
             </a>
             <a aria-current="page" className={`${navLink} border-[#121212] bg-[#121212] text-white`} href="/about">

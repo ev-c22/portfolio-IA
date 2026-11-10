@@ -92,7 +92,7 @@ export default function CaseStudyTemplate({ name }: { name: string }) {
             <a aria-current="page" className={`${navLink} border-[#121212] bg-[#121212] text-white`} href="/">
               Work
             </a>
-            <a className={`${navLink} border-[#e6e6e6]`} href="/#play">
+            <a className={`${navLink} border-[#e6e6e6]`} href="/play">
               Play
             </a>
             <a className={`${navLink} border-[#e6e6e6]`} href="/about">
