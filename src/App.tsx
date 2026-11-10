@@ -199,10 +199,10 @@ export default function App() {
             <a href="mailto:ecaldas22@gmail.com">ecaldas22@gmail.com</a>
           </div>
           <div>
-            <a href="https://www.behance.net/" rel="noreferrer" target="_blank">
+            <a href="https://www.behance.net/caldas" rel="noreferrer" target="_blank">
               Behance
             </a>
-            <a href="https://www.linkedin.com/" rel="noreferrer" target="_blank">
+            <a href="https://www.linkedin.com/in/eva-caldas-58232515/" rel="noreferrer" target="_blank">
               LinkedIn
             </a>
           </div>
