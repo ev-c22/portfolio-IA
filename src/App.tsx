@@ -231,9 +231,16 @@ export default function App() {
           </div>
 
           {view === "grid" ? (
-            <div className="projects projects--grid">
-              {projects.map((project) => (
-                <ProjectCard key={project.name} project={project} />
+            <div className="project-groups">
+              {listGroups.map((group) => (
+                <div key={group.title}>
+                  <p className="project-list-header">{group.title}</p>
+                  <div className="projects projects--grid">
+                    {group.projects.map((project) => (
+                      <ProjectCard key={project.name} project={project} />
+                    ))}
+                  </div>
+                </div>
               ))}
             </div>
           ) : (
