@@ -8,6 +8,8 @@ type Project = {
   image?: string;
   imageClass?: string;
   background: string;
+  // Page opened when the project is clicked, if it has one.
+  href?: string;
 };
 
 const projects: Project[] = [
@@ -17,6 +19,7 @@ const projects: Project[] = [
     image: "/assets/34200.png",
     imageClass: "project-image--contain",
     background: "#9a948c",
+    href: "/moonrider",
   },
   {
     name: "School Jam",
@@ -53,9 +56,18 @@ const projects: Project[] = [
   },
 ];
 
+// Covers the whole card/row so any click opens the project page.
+function ProjectLink({ project }: { project: Project }) {
+  if (!project.href) return null;
+  return (
+    <a aria-label={`${project.name} case study`} className="project-link" href={project.href} />
+  );
+}
+
 function ProjectCard({ project }: { project: Project }) {
   return (
     <article className="project-card" style={{ backgroundColor: project.background }}>
+      <ProjectLink project={project} />
       {project.image ? (
         <img
           alt={`${project.name} project`}
@@ -84,6 +96,7 @@ const LIST_THUMBNAILS = 4;
 function ProjectRow({ project }: { project: Project }) {
   return (
     <article className="project-row">
+      <ProjectLink project={project} />
       <div className="project-row-info">
         <h3>{project.name}</h3>
         <p>{project.discipline}</p>

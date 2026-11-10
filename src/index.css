@@ -22,6 +22,42 @@
   font-weight: 400;
 }
 
+/* Fonts used by the Moonrider case study page. */
+@font-face {
+  font-family: "Nunito:Bold";
+  src: url("https://static.figma.com/font/Nunito_wght__1") format("woff2");
+  font-style: normal;
+  font-weight: 700;
+}
+
+@font-face {
+  font-family: "Nunito:Medium";
+  src: url("https://static.figma.com/font/Nunito_wght__1") format("woff2");
+  font-style: normal;
+  font-weight: 500;
+}
+
+@font-face {
+  font-family: "Nunito:Regular";
+  src: url("https://static.figma.com/font/Nunito_wght__1") format("woff2");
+  font-style: normal;
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: "Sofia Sans Extra Condensed:ExtraBold";
+  src: url("https://static.figma.com/font/SofiaSansExtraCondensed_wght__1") format("woff2");
+  font-style: normal;
+  font-weight: 800;
+}
+
+@font-face {
+  font-family: "Sofia Sans Extra Condensed:Medium";
+  src: url("https://static.figma.com/font/SofiaSansExtraCondensed_wght__1") format("woff2");
+  font-style: normal;
+  font-weight: 500;
+}
+
 :root {
   color: #121212;
   background: #ffffff;
@@ -340,7 +376,20 @@ html {
   border-top: 1px solid #e6e6e6;
 }
 
+.project-link {
+  position: absolute;
+  inset: 0;
+  z-index: 2;
+  border-radius: 4px;
+}
+
+.project-link:focus-visible {
+  outline: 2px solid #121212;
+  outline-offset: 2px;
+}
+
 .project-row {
+  position: relative;
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: 10px;
@@ -559,5 +608,28 @@ footer {
 @media (prefers-reduced-motion: reduce) {
   html {
     scroll-behavior: auto;
+  }
+}
+
+/* Moonrider case study page */
+[class*="font-['Avenir:Roman']"],
+[class*="font-['Avenir:Heavy']"] {
+  font-family: Arial, sans-serif !important;
+}
+
+.moonrider-page img {
+  user-select: none;
+}
+
+.moonrider-page a:focus-visible {
+  outline: 3px solid #7200c4;
+  outline-offset: 3px;
+}
+
+/* The page is a fixed 1440px layout: scale it down on smaller screens. */
+@media (max-width: 900px) {
+  .moonrider-page {
+    width: 1440px;
+    zoom: calc(100vw / 1440px);
   }
 }
