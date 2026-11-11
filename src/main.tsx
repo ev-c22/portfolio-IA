@@ -2,6 +2,7 @@ import React from "react";
 import ReactDOM from "react-dom/client";
 import AboutPage from "./AboutPage";
 import App from "./App";
+import CaseStudySchoolJam from "./CaseStudySchoolJam";
 import CaseStudyTemplate from "./CaseStudyTemplate";
 import { MoonriderPage } from "./CaseStudyMoonriderMobile";
 import PlayPage from "./PlayPage";
@@ -13,8 +14,8 @@ const routes: Record<string, () => React.JSX.Element> = {
   "/about": () => <AboutPage />,
   "/play": () => <PlayPage />,
   "/moonrider": () => <MoonriderPage />,
-  // Placeholder pages until the real images and copy are ready.
-  "/school-jam": () => <CaseStudyTemplate name="School Jam" />,
+  "/school-jam": () => <CaseStudySchoolJam />,
+  // Placeholder page until the real images and copy are ready.
   "/la-plata": () => <CaseStudyTemplate name="La Plata" />,
 };
 

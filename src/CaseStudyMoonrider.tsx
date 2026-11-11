@@ -6,7 +6,17 @@ export const videoAppNavigation = "/assets/moonrider/app-navigation.mp4";
 
 // Muted looping video that only plays while on screen, to save data.
 // With reduced motion it stays paused and shows controls instead.
-export function PhoneVideo({ src, label, className }: { src: string; label: string; className?: string }) {
+export function PhoneVideo({
+  src,
+  label,
+  className,
+  poster,
+}: {
+  src: string;
+  label: string;
+  className?: string;
+  poster?: string;
+}) {
   const ref = useRef<HTMLVideoElement>(null);
   const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
 
@@ -32,6 +42,7 @@ export function PhoneVideo({ src, label, className }: { src: string; label: stri
       loop
       muted
       playsInline
+      poster={poster}
       preload="metadata"
       ref={ref}
       src={src}
