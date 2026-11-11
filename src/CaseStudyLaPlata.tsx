@@ -127,7 +127,7 @@ function SiteMapDiagram() {
       <div className={`${cell} ${page} ml-[21.6%] mt-[102.85px] h-[38.137px] w-[18.11%]`} />
       <p className={`${cell} ${poppins} ml-[22.42%] mt-[109.79px] w-[16.58%] text-center text-white`}>Tapas</p>
       <div className={`${cell} ${content} ml-[1.23%] mt-[402.17px] h-[38.137px] w-[18.12%]`} />
-      <p className={`${cell} ${poppins} ml-[2.05%] mt-[409.1px] w-[16.58%] text-center text-black`}>Quizz</p>
+      <p className={`${cell} ${poppins} ml-[2.05%] mt-[409.1px] w-[16.58%] text-center text-black`}>Quiz</p>
       <div className={`${cell} ${content} ml-[60.7%] mt-[168.73px] h-[38.137px] w-[18.11%]`} />
       <p className={`${cell} ${poppins} ml-[61.51%] mt-[175.66px] w-[16.59%] text-center text-black`}>Calendario</p>
       <div className={`${cell} ${content} ml-[60.7%] mt-[234.6px] h-[62.405px] w-[18.11%]`} />
@@ -150,7 +150,7 @@ function SiteMapDiagram() {
         <div className={`${cell} ${external} ml-0 mt-[65.87px] h-[38.137px] w-full`} />
         <p className={`${cell} ${poppins} ml-[4.52%] mt-[72.81px] w-[91.53%] text-center text-black`}>Instagram</p>
         <div className={`${cell} ${external} ml-0 mt-[131.74px] h-[38.137px] w-full`} />
-        <p className={`${cell} ${poppins} ml-[4.52%] mt-[138.67px] w-[91.53%] text-center text-black`}>Goolge Maps</p>
+        <p className={`${cell} ${poppins} ml-[4.52%] mt-[138.67px] w-[91.53%] text-center text-black`}>Google Maps</p>
       </div>
       <div className={`${cell} ${content} ml-[1.23%] mt-[168.73px] h-[204.551px] w-[18.12%]`} />
       <p className={`${cell} ${poppins} ml-[2.05%] mt-[179.13px] w-[16.58%] text-center tracking-[-0.8px] text-black`}>
@@ -391,7 +391,7 @@ export default function CaseStudyLaPlata() {
 
               <SiteMap />
 
-              <Subtitle>Estrategy</Subtitle>
+              <Subtitle>Strategy</Subtitle>
               <div className="md:w-[696px]">
                 <p>
                   Guided by our research, we focused on extending La Plata's strong sense of community into the digital
