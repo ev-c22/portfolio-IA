@@ -5,6 +5,7 @@ import App from "./App";
 import CaseStudySchoolJam from "./CaseStudySchoolJam";
 import CaseStudyLaPlata from "./CaseStudyLaPlata";
 import CaseStudyPinpoint from "./CaseStudyPinpoint";
+import CaseStudyMojuba from "./CaseStudyMojuba";
 import { MoonriderPage } from "./CaseStudyMoonriderMobile";
 import PlayPage from "./PlayPage";
 import "./index.css";
@@ -18,6 +19,7 @@ const routes: Record<string, () => React.JSX.Element> = {
   "/school-jam": () => <CaseStudySchoolJam />,
   "/la-plata": () => <CaseStudyLaPlata />,
   "/pinpoint": () => <CaseStudyPinpoint />,
+  "/mojuba": () => <CaseStudyMojuba />,
 };
 
 const path = window.location.pathname.replace(/\/+$/, "");

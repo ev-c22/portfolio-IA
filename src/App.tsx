@@ -51,6 +51,7 @@ const projects: Project[] = [
     image: "/assets/11414.png",
     imageClass: "project-image--capoeira",
     background: "#aeaeae",
+    href: "/mojuba",
   },
   {
     name: "COMING SOON",
