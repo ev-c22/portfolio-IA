@@ -43,6 +43,7 @@ const projects: Project[] = [
     image: "/assets/1f504.png",
     imageClass: "project-image--pinpoint",
     background: "#e6e6e6",
+    href: "/pinpoint",
   },
   {
     name: "Mojubá Capoeira",
