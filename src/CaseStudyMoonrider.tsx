@@ -660,6 +660,10 @@ export default function CaseStudyMoonrider() {
                     className="absolute inset-0 max-w-none object-contain pointer-events-none size-full"
                     src={imgMemoriaIntro2}
                   />
+                  {/* Title matched to the one drawn into the user journey image above. */}
+                  <p className="absolute left-[18.5px] top-[48.8px] font-['Sofia_Sans_Extra_Condensed:ExtraBold'] font-extrabold leading-none pointer-events-none text-[48.7px] text-black uppercase whitespace-nowrap">
+                    Árbol de navegación
+                  </p>
                 </div>
               </div>
             </div>
