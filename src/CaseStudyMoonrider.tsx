@@ -598,7 +598,7 @@ export default function CaseStudyMoonrider() {
               >
                 <p className="font-['Inter:Regular'] leading-[31px] max-w-[900px] pb-[16px] pt-[32px] text-[#0e0d0d] text-[24px] tracking-[-0.53px] w-full">
                   As one of the aims is to integrate people with disabilities with people without
-                  them two personas were created: Ana, an user with mobility issues, and Ruth, her
+                  them two personas were created: Ana, a user with mobility issues, and Ruth, her
                   friend without mobility issues. Both of them are involved, in different ways, to
                   create a party plan that is fun and safe for both of them.
                 </p>
