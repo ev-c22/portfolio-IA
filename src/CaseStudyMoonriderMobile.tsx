@@ -80,7 +80,7 @@ const researchBoards: { file: string; alt: string; intro?: string }[] = [
     file: "a9532.png",
     alt: "Personas: Ana Amat (user) and Ruth Sánchez (collaborator)",
     intro:
-      "As one of the aims is to integrate people with disabilities with people without them two personas were created: Ana, an user with mobility issues, and Ruth, her friend without mobility issues. Both of them are involved, in different ways, to create a party plan that is fun and safe for both of them.",
+      "As one of the aims is to integrate people with disabilities with people without them two personas were created: Ana, a user with mobility issues, and Ruth, her friend without mobility issues. Both of them are involved, in different ways, to create a party plan that is fun and safe for both of them.",
   },
   { file: "fe872.png", alt: "Ana's user flow" },
   { file: "abeda.png", alt: "Ruth's user flow" },
