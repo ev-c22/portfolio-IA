@@ -575,6 +575,10 @@ export default function CaseStudyMoonrider() {
               className="content-stretch flex flex-col gap-[16px] items-start relative shrink-0 w-full"
               data-node-id="1:262"
             >
+              <p className="font-['Inter:Regular'] leading-[31px] max-w-[900px] pb-[16px] text-[#0e0d0d] text-[24px] tracking-[-0.53px]">
+                There was no similar app on the market so the benchmarking was done against the
+                functionalities of other apps of the leisure sector.
+              </p>
               <div
                 className="border border-black border-solid h-[664px] relative shrink-0 w-full"
                 data-node-id="1:263"
@@ -592,6 +596,12 @@ export default function CaseStudyMoonrider() {
                 className="content-center flex flex-wrap gap-[16px] items-center relative shrink-0 w-full"
                 data-node-id="1:264"
               >
+                <p className="font-['Inter:Regular'] leading-[31px] max-w-[900px] pb-[16px] pt-[32px] text-[#0e0d0d] text-[24px] tracking-[-0.53px] w-full">
+                  As one of the aims is to integrate people with disabilities with people without
+                  them two personas were created: Ana, an user with mobility issues, and Ruth, her
+                  friend without mobility issues. Both of them are involved, in different ways, to
+                  create a party plan that is fun and safe for both of them.
+                </p>
                 <div
                   className="border border-black border-solid h-[792px] relative shrink-0 w-[1265px]"
                   data-node-id="1:265"
@@ -628,17 +638,6 @@ export default function CaseStudyMoonrider() {
                   </div>
                 </div>
                 <div
-                  className="border border-black border-solid h-[903px] relative shrink-0 w-[1262px]"
-                  data-node-id="1:268"
-                  data-name="Memoria_intro-2"
-                >
-                  <img
-                    alt=""
-                    className="absolute inset-0 max-w-none object-contain pointer-events-none size-full"
-                    src={imgMemoriaIntro2}
-                  />
-                </div>
-                <div
                   className="border border-black border-solid flex-[1_0_0] h-[744px] min-w-px relative"
                   data-node-id="1:269"
                   data-name="user journey y mapa de empatia 1"
@@ -650,6 +649,17 @@ export default function CaseStudyMoonrider() {
                       src={imgUserJourneyYMapaDeEmpatia1}
                     />
                   </div>
+                </div>
+                <div
+                  className="border border-black border-solid h-[903px] relative shrink-0 w-[1262px]"
+                  data-node-id="1:268"
+                  data-name="Memoria_intro-2"
+                >
+                  <img
+                    alt=""
+                    className="absolute inset-0 max-w-none object-contain pointer-events-none size-full"
+                    src={imgMemoriaIntro2}
+                  />
                 </div>
               </div>
             </div>
