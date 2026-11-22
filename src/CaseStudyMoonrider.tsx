@@ -306,7 +306,7 @@ export default function CaseStudyMoonrider() {
             data-node-id="1:228"
             data-name="overview info"
           >
-            <div className="h-0 relative shrink-0 w-[calc(100%-28px)]" data-node-id="1:229">
+            <div className="h-0 relative shrink-0 w-full" data-node-id="1:229">
               <div className="absolute inset-[-0.5px_0]">
                 <img alt="" className="block max-w-none size-full" src={imgLine2} />
               </div>
@@ -349,7 +349,7 @@ export default function CaseStudyMoonrider() {
               <p className="leading-[32px] mb-0 text-[24px]">Location</p>
               <p className="font-['Avenir:Heavy'] leading-[32px] text-[24px]">Barcelona</p>
             </div>
-            <div className="h-0 relative shrink-0 w-[calc(100%-28px)]" data-node-id="1:235">
+            <div className="h-0 relative shrink-0 w-full" data-node-id="1:235">
               <div className="absolute inset-[-0.5px_0]">
                 <img alt="" className="block max-w-none size-full" src={imgLine2} />
               </div>
