@@ -214,7 +214,7 @@ function CaseStudyMoonriderMobile() {
               interactions and visual design.
             </p>
             <div className="flex flex-col gap-2">
-              <p className="text-black/50">ODS</p>
+              <p className="text-black/50">Sustainable Development Goals (SDGs)</p>
               <div className="flex gap-3">
                 {["c0374.png", "aaa9b.png", "77c3d.png"].map((file, index) => (
                   <img
