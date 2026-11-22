@@ -48,11 +48,23 @@ const objectives = [
   "Create an user experience adapted to the needs and preferences of the user",
 ];
 
-const methods = [
-  "Observation of people with disabilities on public transport, the street and what they have to say on social media.",
-  "Interviews with people with temporary or permanent disabilities",
-  "Desk research, reports and talks from associations and communities that fight for accessibility",
-  "Benchmarking of digital services that operate in the leisure sector or have accessibility functionalities.",
+const methods: ReactNode[] = [
+  <>
+    <strong className="font-['Inter'] font-bold">Observation</strong> of people with disabilities on
+    public transport, the street and what they have to say on social media.
+  </>,
+  <>
+    <strong className="font-['Inter'] font-bold">Interviews</strong> with people with temporary or
+    permanent disabilities
+  </>,
+  <>
+    <strong className="font-['Inter'] font-bold">Desk research</strong>, reports and talks from
+    associations and communities that fight for accessibility
+  </>,
+  <>
+    <strong className="font-['Inter'] font-bold">Benchmarking</strong> of digital services that
+    operate in the leisure sector or have accessibility functionalities.
+  </>,
 ];
 
 // Research boards: detailed images, so each one opens full size on tap.
@@ -115,12 +127,12 @@ function Subtitle({ children }: { children: ReactNode }) {
   return <h3 className={`${jaro} text-[30px] leading-[1.1] text-black`}>{children}</h3>;
 }
 
-function Bullets({ items, ordered = false }: { items: string[]; ordered?: boolean }) {
+function Bullets({ items, ordered = false }: { items: ReactNode[]; ordered?: boolean }) {
   const List = ordered ? "ol" : "ul";
   return (
     <List className={`${ordered ? "list-decimal" : "list-disc"} space-y-1 ps-6`}>
-      {items.map((item) => (
-        <li key={item}>{item}</li>
+      {items.map((item, index) => (
+        <li key={index}>{item}</li>
       ))}
     </List>
   );
