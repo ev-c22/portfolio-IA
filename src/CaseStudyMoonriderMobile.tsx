@@ -1,4 +1,4 @@
-import { useEffect, useState, type ReactNode } from "react";
+import { Fragment, useEffect, useState, type ReactNode } from "react";
 import CaseStudyMoonrider, {
   PhoneVideo,
   heroBackground,
@@ -68,13 +68,24 @@ const methods: ReactNode[] = [
 ];
 
 // Research boards: detailed images, so each one opens full size on tap.
-const researchBoards = [
-  { file: "7dc09.png", alt: "Benchmark research comparing Moonrider with other apps" },
-  { file: "a9532.png", alt: "Personas: Ana Amat (user) and Ruth Sánchez (collaborator)" },
+// `intro` is an optional paragraph shown just before that image.
+const researchBoards: { file: string; alt: string; intro?: string }[] = [
+  {
+    file: "7dc09.png",
+    alt: "Benchmark research comparing Moonrider with other apps",
+    intro:
+      "There was no similar app on the market so the benchmarking was done against the functionalities of other apps of the leisure sector.",
+  },
+  {
+    file: "a9532.png",
+    alt: "Personas: Ana Amat (user) and Ruth Sánchez (collaborator)",
+    intro:
+      "As one of the aims is to integrate people with disabilities with people without them two personas were created: Ana, an user with mobility issues, and Ruth, her friend without mobility issues. Both of them are involved, in different ways, to create a party plan that is fun and safe for both of them.",
+  },
   { file: "fe872.png", alt: "Ana's user flow" },
   { file: "abeda.png", alt: "Ruth's user flow" },
-  { file: "8756c.png", alt: "Moonrider app flow diagram" },
   { file: "ca2e4.png", alt: "User journey and empathy map for Ana and Ruth" },
+  { file: "8756c.png", alt: "Moonrider app flow diagram" },
 ];
 
 const insights = [
@@ -246,10 +257,13 @@ function CaseStudyMoonriderMobile() {
           </div>
 
           <div className="flex flex-col gap-3">
-            {researchBoards.map(({ file, alt }) => (
-              <a className="block overflow-hidden rounded border border-[#e6e6e6]" href={asset(file)} key={file} target="_blank" rel="noreferrer">
-                <img alt={alt} className="w-full" src={asset(file)} />
-              </a>
+            {researchBoards.map(({ file, alt, intro }) => (
+              <Fragment key={file}>
+                {intro && <p className="pt-3">{intro}</p>}
+                <a className="block overflow-hidden rounded border border-[#e6e6e6]" href={asset(file)} target="_blank" rel="noreferrer">
+                  <img alt={alt} className="w-full" src={asset(file)} />
+                </a>
+              </Fragment>
             ))}
             <p className="text-[14px] text-black/50">Tap an image to see it full size.</p>
           </div>
