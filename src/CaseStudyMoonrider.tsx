@@ -527,15 +527,19 @@ export default function CaseStudyMoonrider() {
                   className="font-['Avenir:Roman'] h-[172px] relative shrink-0 text-[0px] w-[622px]"
                   data-node-id="1:259"
                 >
-                  <ul className="list-disc mb-0">
-                    <li className="mb-0 ms-[calc(var(--list-marker-font-size,0)*1.5*1)]">
+                  <ul className="list-disc mb-0 text-[24px]">
+                    <li className="mb-0 ms-[36px]">
                       <span className="[word-break:break-word] font-['Inter:Regular'] font-normal leading-[31px] not-italic text-[24px] tracking-[-0.53px]">
-                        Observation of people with disabilities on public transport, the street and
-                        what they have to say on social media.
+                        <strong className="font-['Inter'] font-bold">Observation</strong> of people
+                        with disabilities on public transport, the street and what they have to say
+                        on social media.
                       </span>
                     </li>
-                    <li className="ms-[calc(var(--list-marker-font-size,0)*1.5*1)]">
-                      <span className="[word-break:break-word] font-['Inter:Regular'] font-normal leading-[31px] not-italic text-[24px] tracking-[-0.53px]">{`Interviews with people with temporary or permanent disabilities `}</span>
+                    <li className="ms-[36px]">
+                      <span className="[word-break:break-word] font-['Inter:Regular'] font-normal leading-[31px] not-italic text-[24px] tracking-[-0.53px]">
+                        <strong className="font-['Inter'] font-bold">Interviews</strong> with people
+                        with temporary or permanent disabilities
+                      </span>
                     </li>
                   </ul>
                   <p className="leading-[32px] mb-0 text-[24px] whitespace-pre-wrap">​</p>
@@ -548,14 +552,15 @@ export default function CaseStudyMoonrider() {
                 >
                   <li className="mb-0 ms-[36px]">
                     <span className="leading-[31px]">
-                      Desk research, reports and talks from associations and communities that fight
-                      for accessibility
+                      <strong className="font-['Inter'] font-bold">Desk research</strong>, reports
+                      and talks from associations and communities that fight for accessibility
                     </span>
                   </li>
                   <li className="ms-[36px]">
                     <span className="leading-[31px]">
-                      Benchmarking of digital services that operate in the leisure sector or have
-                      accessibility functionalities.
+                      <strong className="font-['Inter'] font-bold">Benchmarking</strong> of digital
+                      services that operate in the leisure sector or have accessibility
+                      functionalities.
                     </span>
                   </li>
                 </ul>
