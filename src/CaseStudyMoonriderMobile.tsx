@@ -326,7 +326,7 @@ function CaseStudyMoonriderMobile() {
           </div>
 
           <div className="flex flex-col gap-4">
-            <Subtitle>Branding</Subtitle>
+            <Subtitle>Design Kit</Subtitle>
             <p>
               Inspired by urban elements like doodles, graffiti, collage and stickers to create a dynamic, fresh and fun
               experience. Concepts: rebellion and juvenile spontaneity.
