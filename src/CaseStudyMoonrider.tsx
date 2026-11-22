@@ -453,10 +453,10 @@ export default function CaseStudyMoonrider() {
                 data-name="ODS"
               >
                 <div
-                  className="[word-break:break-word] flex flex-col font-['Inter:Regular'] font-normal justify-center leading-[0] not-italic relative shrink-0 text-[24px] text-black tracking-[-0.53px] whitespace-nowrap"
+                  className="[word-break:break-word] flex flex-col font-['Inter:Regular'] font-normal justify-center leading-[0] not-italic relative shrink-0 text-[24px] text-black tracking-[-0.53px]"
                   data-node-id="1:249"
                 >
-                  <p className="leading-[31px]">ODS</p>
+                  <p className="leading-[31px]">Sustainable Development Goals (SDGs)</p>
                 </div>
                 <div
                   className="content-stretch flex flex-col items-start relative shrink-0 w-full"
