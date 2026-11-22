@@ -932,7 +932,7 @@ export default function CaseStudyMoonrider() {
               data-node-id="1:299"
               style={{ fontVariationSettings: '"opsz" 6' }}
             >
-              <p className="leading-[32px]">Branding</p>
+              <p className="leading-[32px]">Design Kit</p>
             </div>
             <p
               className="[word-break:break-word] font-['Avenir:Roman'] h-[96px] leading-[32px] not-italic relative shrink-0 text-[24px] text-black w-[696px]"
