@@ -69,7 +69,8 @@ const methods: ReactNode[] = [
 
 // Research boards: detailed images, so each one opens full size on tap.
 // `intro` is an optional paragraph shown just before that image.
-const researchBoards: { file: string; alt: string; intro?: string }[] = [
+// `title` is drawn over the image's top-left corner, matching the titles baked into the other boards.
+const researchBoards: { file: string; alt: string; intro?: string; title?: string }[] = [
   {
     file: "7dc09.png",
     alt: "Benchmark research comparing Moonrider with other apps",
@@ -85,7 +86,7 @@ const researchBoards: { file: string; alt: string; intro?: string }[] = [
   { file: "fe872.png", alt: "Ana's user flow" },
   { file: "abeda.png", alt: "Ruth's user flow" },
   { file: "ca2e4.png", alt: "User journey and empathy map for Ana and Ruth" },
-  { file: "8756c.png", alt: "Moonrider app flow diagram" },
+  { file: "8756c.png", alt: "Moonrider app flow diagram", title: "Árbol de navegación" },
 ];
 
 const insights = [
@@ -257,11 +258,16 @@ function CaseStudyMoonriderMobile() {
           </div>
 
           <div className="flex flex-col gap-3">
-            {researchBoards.map(({ file, alt, intro }) => (
+            {researchBoards.map(({ file, alt, intro, title }) => (
               <Fragment key={file}>
                 {intro && <p className="pt-3">{intro}</p>}
-                <a className="block overflow-hidden rounded border border-[#e6e6e6]" href={asset(file)} target="_blank" rel="noreferrer">
+                <a className="relative block overflow-hidden rounded border border-[#e6e6e6] [container-type:inline-size]" href={asset(file)} target="_blank" rel="noreferrer">
                   <img alt={alt} className="w-full" src={asset(file)} />
+                  {title && (
+                    <p className="absolute left-[3.56cqw] top-[3.61cqw] font-['Sofia_Sans_Extra_Condensed:ExtraBold'] font-extrabold leading-none pointer-events-none text-[3.69cqw] text-black uppercase whitespace-nowrap">
+                      {title}
+                    </p>
+                  )}
                 </a>
               </Fragment>
             ))}
