@@ -85,8 +85,18 @@ const researchBoards: { file: string; alt: string; intro?: string; title?: strin
   },
   { file: "fe872.png", alt: "Ana's user flow" },
   { file: "abeda.png", alt: "Ruth's user flow" },
-  { file: "ca2e4.png", alt: "User journey and empathy map for Ana and Ruth" },
-  { file: "8756c.png", alt: "Moonrider app flow diagram", title: "Árbol de navegación" },
+  {
+    file: "ca2e4.png",
+    alt: "User journey and empathy map for Ana and Ruth",
+    intro:
+      "In order to understand the personas better we created user flows and user journeys with empathy maps.",
+  },
+  {
+    file: "8756c.png",
+    alt: "Moonrider app flow diagram",
+    title: "Árbol de navegación",
+    intro: "The navigation tree give us a clear image of how the users can move in the app.",
+  },
 ];
 
 const insights = [
