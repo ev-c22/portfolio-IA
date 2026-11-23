@@ -830,8 +830,8 @@ export default function CaseStudyMoonrider() {
             </div>
           </div>
           <PhoneVideoSequence
-            captionClassName="font-['Inter:Medium'] font-medium text-[#0e0d0d] text-[24px] tracking-[-0.53px]"
-            className="flex gap-[48px] items-start justify-center relative shrink-0"
+            captionClassName="font-['Inter'] font-light text-[#0e0d0d] text-[18px]"
+            className="flex items-start justify-between relative shrink-0 w-[calc(100%-32px)]"
             clips={onboardingClips}
             figureClassName="gap-[16px]"
             src={videoOnboarding}
