@@ -637,7 +637,7 @@ export default function CaseStudyMoonrider() {
                     />
                   </div>
                 </div>
-                <p className="font-['Inter:Regular'] leading-[31px] max-w-[900px] pb-[16px] pt-[32px] text-[#0e0d0d] text-[24px] tracking-[-0.53px] w-full">
+                <p className="basis-full font-['Inter:Regular'] leading-[31px] pb-[16px] pr-[362px] pt-[32px] shrink-0 text-[#0e0d0d] text-[24px] tracking-[-0.53px]">
                   In order to understand the personas better we created user flows and user
                   journeys with empathy maps.
                 </p>
@@ -654,7 +654,7 @@ export default function CaseStudyMoonrider() {
                     />
                   </div>
                 </div>
-                <p className="font-['Inter:Regular'] leading-[31px] max-w-[900px] pb-[16px] pt-[32px] text-[#0e0d0d] text-[24px] tracking-[-0.53px] w-full">
+                <p className="basis-full font-['Inter:Regular'] leading-[31px] pb-[16px] pr-[362px] pt-[32px] shrink-0 text-[#0e0d0d] text-[24px] tracking-[-0.53px]">
                   The navigation tree give us a clear image of how the users can move in the app.
                 </p>
                 <div
