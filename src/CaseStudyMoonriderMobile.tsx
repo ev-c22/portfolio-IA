@@ -432,6 +432,10 @@ function CaseStudyMoonriderMobile() {
         {/* Outcomes */}
         <section className="flex flex-col gap-8">
           <SectionTitle>OUTCOMES &amp; LEARNINGS</SectionTitle>
+          <p>
+            It was a well received project in the class that the teachers believed could have a positive impact on
+            young wheelchair users when successfully introduced to the market. It got us 9/10.
+          </p>
           <div className="flex flex-col gap-4">
             <Subtitle>To improve</Subtitle>
             <Bullets items={improvements} />
