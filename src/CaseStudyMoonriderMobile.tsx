@@ -1,7 +1,9 @@
 import { Fragment, useEffect, useState, type ReactNode } from "react";
 import CaseStudyMoonrider, {
   PhoneVideo,
+  PhoneVideoSequence,
   heroBackground,
+  onboardingClips,
   videoAppNavigation,
   videoOnboarding,
 } from "./CaseStudyMoonrider";
@@ -291,10 +293,13 @@ function CaseStudyMoonriderMobile() {
               There is a need to design and develop better apps and improve awareness and empathy towards wheelchair
               users.
             </p>
-            <PhoneVideo
-              className="mx-auto mt-4 aspect-[346/717] w-[72%] rounded-[44px]"
-              label="Moonrider onboarding and sign-up flow"
+            <PhoneVideoSequence
+              captionClassName="text-[13px] text-center leading-tight"
+              className="mt-4 grid grid-cols-3 gap-3"
+              clips={onboardingClips}
+              figureClassName="gap-2"
               src={videoOnboarding}
+              videoClassName="aspect-[346/717] w-full rounded-[18px]"
             />
           </div>
 
