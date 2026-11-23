@@ -95,7 +95,7 @@ const researchBoards: { file: string; alt: string; intro?: string; title?: strin
     file: "8756c.png",
     alt: "Moonrider app flow diagram",
     title: "Árbol de navegación",
-    intro: "The navigation tree give us a clear image of how the users can move in the app.",
+    intro: "The navigation tree gives us a clear image of how the users can move in the app.",
   },
 ];
 
