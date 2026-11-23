@@ -1,4 +1,4 @@
-import { useEffect, useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 
 // App screen recordings (1280x720, phone centred on black), cropped to the phone.
 export const videoOnboarding = "/assets/moonrider/onboarding.mp4";
@@ -47,6 +47,102 @@ export function PhoneVideo({
       ref={ref}
       src={src}
     />
+  );
+}
+
+// A section of one recording, in seconds, shown as its own phone.
+export type VideoClip = { start: number; end: number; caption: string; label: string };
+
+// The onboarding recording split into its three parts (the glitchy tail after 43s is left out).
+// Ends sit ~0.4s before each scene change because timeupdate only fires about every 0.25s.
+export const onboardingClips: VideoClip[] = [
+  { start: 0, end: 11.3, caption: "Onboarding", label: "Moonrider onboarding screens" },
+  { start: 11.8, end: 25.3, caption: "Feed and search", label: "Moonrider home feed and search" },
+  {
+    start: 26,
+    end: 43,
+    caption: "Details",
+    label: "Moonrider venue details and accessibility information",
+  },
+];
+
+// Phones side by side, each playing one clip of the same video. They take turns: when one
+// clip ends it rewinds to its first frame and the next one starts, looping back to the first.
+// Plays only while on screen; with reduced motion every phone stays on its first frame.
+export function PhoneVideoSequence({
+  src,
+  clips,
+  className,
+  figureClassName,
+  videoClassName,
+  captionClassName,
+}: {
+  src: string;
+  clips: VideoClip[];
+  className?: string;
+  figureClassName?: string;
+  videoClassName?: string;
+  captionClassName?: string;
+}) {
+  const wrapRef = useRef<HTMLDivElement>(null);
+  const videoRefs = useRef<(HTMLVideoElement | null)[]>([]);
+  const [active, setActive] = useState(0);
+  const [inView, setInView] = useState(false);
+  const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+
+  useEffect(() => {
+    const wrap = wrapRef.current;
+    if (!wrap) return;
+    const observer = new IntersectionObserver(([entry]) => setInView(entry.isIntersecting), {
+      threshold: 0.25,
+    });
+    observer.observe(wrap);
+    return () => observer.disconnect();
+  }, []);
+
+  useEffect(() => {
+    const video = videoRefs.current[active];
+    if (!video || reduceMotion) return;
+    if (!inView) {
+      video.pause();
+      return;
+    }
+    const { start, end } = clips[active];
+    if (video.currentTime < start || video.currentTime >= end) video.currentTime = start;
+    video.play().catch(() => {});
+  }, [active, inView, reduceMotion, clips]);
+
+  const handleTimeUpdate = (index: number) => {
+    const video = videoRefs.current[index];
+    if (!video || index !== active || video.currentTime < clips[index].end) return;
+    video.pause();
+    video.currentTime = clips[index].start;
+    setActive((index + 1) % clips.length);
+  };
+
+  return (
+    <div className={className} ref={wrapRef}>
+      {clips.map((clip, index) => (
+        <figure className={`flex flex-col items-center ${figureClassName ?? ""}`} key={clip.caption}>
+          <video
+            aria-label={clip.label}
+            className={`bg-black object-cover ${videoClassName ?? ""}`}
+            muted
+            onLoadedMetadata={(event) => {
+              event.currentTarget.currentTime = clip.start;
+            }}
+            onTimeUpdate={() => handleTimeUpdate(index)}
+            playsInline
+            preload="metadata"
+            ref={(element) => {
+              videoRefs.current[index] = element;
+            }}
+            src={`${src}#t=${clip.start}`}
+          />
+          <figcaption className={captionClassName}>{clip.caption}</figcaption>
+        </figure>
+      ))}
+    </div>
   );
 }
 
@@ -733,17 +829,14 @@ export default function CaseStudyMoonrider() {
               </div>
             </div>
           </div>
-          <div
-            className="h-[717px] relative rounded-[60px] shrink-0 w-[346px]"
-            data-node-id="1:277"
-            data-name="Screen Recording 2023-07-03 at 17.17.24"
-          >
-            <PhoneVideo
-              className="absolute inset-0 size-full rounded-[60px]"
-              label="Moonrider onboarding and sign-up flow"
-              src={videoOnboarding}
-            />
-          </div>
+          <PhoneVideoSequence
+            captionClassName="font-['Inter:Medium'] font-medium text-[#0e0d0d] text-[24px] tracking-[-0.53px]"
+            className="flex gap-[48px] items-start justify-center relative shrink-0"
+            clips={onboardingClips}
+            figureClassName="gap-[16px]"
+            src={videoOnboarding}
+            videoClassName="h-[717px] rounded-[60px] w-[346px]"
+          />
           <div
             className="h-[158px] opacity-80 relative shrink-0 w-[533px]"
             data-node-id="1:278"
