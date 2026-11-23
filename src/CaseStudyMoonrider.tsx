@@ -1464,6 +1464,11 @@ export default function CaseStudyMoonrider() {
             className="content-stretch flex flex-col gap-[16px] items-start px-[16px] relative shrink-0 w-full"
             data-node-id="1:411"
           >
+            <p className="font-['Inter:Regular'] leading-[31px] max-w-[900px] pb-[16px] text-[#0e0d0d] text-[24px] tracking-[-0.53px]">
+              It was a well received project in the class that the teachers believed could have a
+              positive impact on young wheelchair users when successfully introduced to the market.
+              It got us 9/10.
+            </p>
             <div
               className="[word-break:break-word] flex flex-col font-['Jaro:Regular'] h-[84px] justify-center leading-[0] min-w-full relative shrink-0 text-[52px] text-black w-[min-content]"
               data-node-id="1:412"
