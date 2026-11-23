@@ -294,7 +294,7 @@ function CaseStudyMoonriderMobile() {
               users.
             </p>
             <PhoneVideoSequence
-              captionClassName="text-[13px] text-center leading-tight"
+              captionClassName="font-['Inter'] font-light text-[12px] text-center leading-tight"
               className="mt-4 grid grid-cols-3 gap-3"
               clips={onboardingClips}
               figureClassName="gap-2"
