@@ -655,7 +655,7 @@ export default function CaseStudyMoonrider() {
                   </div>
                 </div>
                 <p className="basis-full font-['Inter:Regular'] leading-[31px] pb-[16px] pr-[362px] pt-[32px] shrink-0 text-[#0e0d0d] text-[24px] tracking-[-0.53px]">
-                  The navigation tree give us a clear image of how the users can move in the app.
+                  The navigation tree gives us a clear image of how the users can move in the app.
                 </p>
                 <div
                   className="border border-black border-solid h-[903px] relative shrink-0 w-[1262px]"
